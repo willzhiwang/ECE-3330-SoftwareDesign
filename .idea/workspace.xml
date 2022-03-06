@@ -285,8 +285,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oral_exam1/S10_ArabicToRomanGUI_Hard/src/GUInumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam1/S10_ArabicToRomanGUI_Hard/src/GUInumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oral_exam1/S10_ArabicToRomanGUI_Hard/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam1/S10_ArabicToRomanGUI_Hard/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oral_exam1/S1_Computus_Medium/src/EasterCal.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam1/S1_Computus_Medium/src/EasterCal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oral_exam1/S1_Computus_Medium/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam1/S1_Computus_Medium/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -514,7 +512,7 @@
       <recent name="C:\Users\MarkusDrealan\git\swd2018\textbook_examples\MVCCalculatorExamples" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="S21_HangmanGUI_Medium" />
@@ -522,16 +520,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="S10_ArabicToRomanGUI_Hard" />
+      <module name="S27_MachineLearning_Medium" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ServerTest" />
-      <module name="28-13_FileRetrieve_Easy" />
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RequestInheritance.Server" />
+      <module name="S31_RequestInheritance_Medium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="RequestInheritance.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -543,10 +547,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EasterCalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="S1_Computus_Medium" />
+    <configuration name="MachineLearningTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="S27_MachineLearning_Medium" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="EasterCalTest" />
+      <option name="MAIN_CLASS_NAME" value="MachineLearningTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -555,17 +559,17 @@
     <list>
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.main" />
-      <item itemvalue="Application.ServerTest" />
-      <item itemvalue="JUnit.EasterCalTest" />
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (2)" />
+      <item itemvalue="JUnit.MachineLearningTest" />
+      <item itemvalue="Application.Server" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.ServerTest" />
-        <item itemvalue="JUnit.EasterCalTest" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="JUnit.MachineLearningTest" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>

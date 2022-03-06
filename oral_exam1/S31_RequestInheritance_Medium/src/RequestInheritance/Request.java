@@ -1,38 +1,35 @@
 package RequestInheritance;
 
 import java.util.UUID;
+
 /**
  * class request extends data generator to get randon data
+ *
  * @see DataGenerator
  */
 public class Request extends DataGenerator {
-    private UUID randUUID = getRandUUID();
     public static int count;
+    private UUID randUUID = getRandUUID();
 
     /**
-     *
      * @param randUUID random UUID
      */
-    public Request(UUID randUUID)
-    {
+    public Request(UUID randUUID) {
         this.randUUID = randUUID;
         count++;
     }
 
     /**
-     *
-     * @return The Stirng output
+     * @return count number
      */
-    public String toString(){
-       return (super.toString()+"\nUUID: " + randUUID);
+    public static int count() {
+        return count;
     }
 
     /**
-     *
-     * @return count number
+     * @return The Stirng output
      */
-    public static int count()
-    {
-        return count;
+    public String toString() {
+        return (super.toString() + "\nUUID: " + randUUID);
     }
 }

@@ -7,10 +7,9 @@ public class Server {
     private static final Integer NUM_REQ_TYPES = 9;
 
     /**
-     *
      * @param argv Main function test couple cases
      */
-    public static void main(String argv[]) {
+    public static void main(String[] argv) {
         Stack<Request> requestStack = new Stack<>();
         Random random = new Random();
         DataGenerator data = new DataGenerator();

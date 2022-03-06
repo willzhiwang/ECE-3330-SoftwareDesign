@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 // A class known as EasterCal
 

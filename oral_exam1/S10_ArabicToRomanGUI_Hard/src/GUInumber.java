@@ -1,33 +1,33 @@
 /**
  * @author Zhi Wang
- *This is the GUI class
- *
+ * This is the GUI class
  */
+
 import javax.swing.*;
-import java.awt.*; // set layout, etc
-import java.awt.event.*; // All key events
+import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 /**
  * This class is extending JFrame
- * @see JFrame
  *
+ * @see JFrame
  */
-public class GUInumber extends JFrame
-{
-    private  JTextField textField1; // text field with set size
-    private JTextField textField2; // text field with text
-    private JLabel Arabic;
-    private JLabel Roman;
-    public String decimal;
-    public  String roman, romantest;
-    String roman_numbers[] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
-    int numbers[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+public class GUInumber extends JFrame {
     //arabic to roman calculation
     public static int box;
+    public String decimal;
+    public String roman, romantest;
+    String[] roman_numbers = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+    int[] numbers = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+    private final JTextField textField1; // text field with set size
+    private final JTextField textField2; // text field with text
+    private final JLabel Arabic;
+    private final JLabel Roman;
 
     /**
-     *  This GUInumber funcion set textfields and labels
-     *  with addKeyListener method and KeyAdapter abstract class apply on textfield to read input
+     * This GUInumber funcion set textfields and labels
+     * with addKeyListener method and KeyAdapter abstract class apply on textfield to read input
      */
     public GUInumber() {
         super("Great Arabic/Roman Numbers translator");
@@ -51,22 +51,18 @@ public class GUInumber extends JFrame
         textField1.addKeyListener(new KeyAdapter() {
             public void keyReleased(KeyEvent e) {
                 String resultstring = textField1.getText();
-                box =0;
+                box = 0;
                 try {
                     arabic2roman(resultstring);
                     textField2.setText(roman);
+                } catch (NumberFormatException error) {
                 }
-                catch (NumberFormatException error) {
+                try {
+                    System.out.println(box);
+                    roman2arabic(resultstring);
+                } catch (NumberFormatException error) {
+                    textField2.setText("invalid");
                 }
-                try
-                {
-                        System.out.println(box);
-                        roman2arabic(resultstring);
-                }
-                    catch (NumberFormatException error)
-                    {
-                        textField2.setText("invalid");
-                    }
 
             }
         });
@@ -92,10 +88,10 @@ public class GUInumber extends JFrame
 
     /**
      * translate arabic to roman
+     *
      * @param arabic the string input that are supposed to be int
      */
-    private void arabic2roman ( String arabic)
-    {
+    private void arabic2roman(String arabic) {
         int result = 0;
         String results;
         results = arabic;
@@ -118,14 +114,11 @@ public class GUInumber extends JFrame
 
                     romantest = roman;
                 }
-            }
-            else {
-                if (box ==0)
-                {
+            } else {
+                if (box == 0) {
                     textField2.setText("invalid");
                 }
-                if (box ==1)
-                {
+                if (box == 1) {
                     textField1.setText("invalid");
                 }
                 System.out.print("Between 1 and 3999!");
@@ -133,41 +126,35 @@ public class GUInumber extends JFrame
 
         }
         // if string is not int
-        catch (NumberFormatException error)
-        {
+        catch (NumberFormatException error) {
 
         }
     }
+
     /**
      * translate roman to arabic
+     *
      * @param r the string input that are supposed to be int
      */
     private void roman2arabic(String r) {
         String romanNumeral = r.toUpperCase();
         System.out.println(romanNumeral);
 
-        if ((romanNumeral.contains("XXXX") || romanNumeral.contains("IIII") || romanNumeral.contains("CCCC") || romanNumeral.contains("MMMM")))
-        {
-            if (box ==0)
-            {
+        if ((romanNumeral.contains("XXXX") || romanNumeral.contains("IIII") || romanNumeral.contains("CCCC") || romanNumeral.contains("MMMM"))) {
+            if (box == 0) {
                 textField2.setText("invalid");
             }
-            if (box ==1)
-            {
+            if (box == 1) {
                 textField1.setText("invalid");
             }
-        }
-        else if (((romanNumeral.contains("M") || (romanNumeral.contains("C"))) || (romanNumeral.contains("D")) || (romanNumeral.contains("L")) || (romanNumeral.contains("X"))
-                || (romanNumeral.contains("V")) || (romanNumeral.contains("I"))))
-        {
+        } else if (((romanNumeral.contains("M") || (romanNumeral.contains("C"))) || (romanNumeral.contains("D")) || (romanNumeral.contains("L")) || (romanNumeral.contains("X")) || (romanNumeral.contains("V")) || (romanNumeral.contains("I")))) {
             int decimalNum = 0;
             int len = romanNumeral.length();
             int num = 0;
             int previousNum = 0;
             // get all romans to char
             int check = 0;
-            for (int i = len - 1; i >= 0; i--)
-            {
+            for (int i = len - 1; i >= 0; i--) {
                 char x = romanNumeral.charAt(i);
                 x = Character.toUpperCase(x);// all upper case
 
@@ -192,62 +179,48 @@ public class GUInumber extends JFrame
                 } else if (x == 'M') {
                     previousNum = num;
                     num = 1000;
-                }
-                else {
+                } else {
                     //System.out.println("failed");
                     check = 1; //check fail
-                    if (box ==0)
-                    {
+                    if (box == 0) {
                         textField2.setText("invalid");
                     }
-                    if (box ==1)
-                    {
+                    if (box == 1) {
                         textField1.setText("invalid");
                     }
 
                 }
                 if (num < previousNum) {
                     decimalNum = decimalNum - num;
-                }
-                else {
+                } else {
                     decimalNum = decimalNum + num;
                 }
             }
-            if (check == 0)
-            {
+            if (check == 0) {
                 arabic2roman(String.valueOf(decimalNum)); // check all invalid cases
                 //System.out.println(romantest);
                 //System.out.println(romanNumeral);
-                if (romanNumeral.equals(romantest))
-                {
+                if (romanNumeral.equals(romantest)) {
                     decimal = Integer.toString(decimalNum);
 
-                    if (box ==0)
-                    {
+                    if (box == 0) {
                         textField2.setText(decimal);
                     }
-                    if (box ==1)
-                    {
+                    if (box == 1) {
                         textField1.setText(decimal);
                     }
-                }
-                else
-                {
-                    if (box ==0)
-                    {
+                } else {
+                    if (box == 0) {
                         textField2.setText("invalid");
                     }
-                    if (box ==1)
-                    {
+                    if (box == 1) {
                         textField2.setText("invalid");
                     }
                 }
-            }
-            else {
+            } else {
                 //textField1.setText("invalid");
             }
-        }
-        else {
+        } else {
         }
     }
 

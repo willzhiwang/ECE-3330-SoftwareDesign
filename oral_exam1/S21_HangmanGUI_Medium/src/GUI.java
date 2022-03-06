@@ -1,7 +1,6 @@
 /**
  * @author Zhi Wang
- *This is the GUI class
- *
+ * This is the GUI class
  * @param welcome           the welcome label
  * @param knownWordLabel    the known word label
  * @param MissesLabel       the missed word label
@@ -15,32 +14,37 @@
  * @param result            the result of win or lose as label
  * @param index             the index of the word
  * @param list              the arraylist of the string input
- *  @param set              the hashset of the wrong input
+ * @param set              the hashset of the wrong input
  */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+
 /**
  * This class is extending:
- * @see JFrame
  *
+ * @see JFrame
  */
 public class GUI extends JFrame {
-    private JLabel welcome , knownWordLabel, MissedLabel;
-    private JLabel result;
-    private JTextField inputfield = new JTextField(null,18);
-    private BufferedImage hangman = new BufferedImage(250, 500, BufferedImage.TYPE_INT_ARGB);
-    private JPanel hangmanPanel, inputPanel;
+    private final JLabel welcome;
+    private final JLabel MissedLabel;
+    private final JLabel result;
+    private final JTextField inputfield = new JTextField(null, 18);
+    private final BufferedImage hangman = new BufferedImage(250, 500, BufferedImage.TYPE_INT_ARGB);
+    private final JPanel inputPanel;
+    private final ArrayList<String> list;
+    private final HashSet<String> set = new HashSet<String>();
+    private JLabel knownWordLabel;
+    private JPanel hangmanPanel;
     private String input = null;
     private String known = null;
-    private int wrongcount= 0;
+    private int wrongcount = 0;
     private int index;
-    private ArrayList<String> list;
-    private HashSet<String> set = new HashSet<String>();
 
     /**
      * the gui to create two panels, and ask user to guess the word
@@ -54,13 +58,13 @@ public class GUI extends JFrame {
         //wordTextField.setToolTipText("Net Connection: Leave Blank for Random Word");
         welcome = new JLabel("Please input a word: (1 letter)");
         knownWordLabel = new JLabel("  Guess the Word:");
-        MissedLabel = new JLabel(  "    You have missed: ");
+        MissedLabel = new JLabel("    You have missed: ");
         result = new JLabel();
         //set the font for the label and field so that it would fill in there
         welcome.setFont(new Font("", Font.PLAIN, 25));
         knownWordLabel.setFont(new Font("", Font.PLAIN, 25));
         inputfield.setFont(new Font("", Font.PLAIN, 25));
-        inputfield .setEditable(true);
+        inputfield.setEditable(true);
         MissedLabel.setFont(new Font("", Font.PLAIN, 25));
         result.setFont(new Font("", Font.PLAIN, 45));
         inputPanel = new JPanel();
@@ -74,8 +78,7 @@ public class GUI extends JFrame {
 
         inputfield.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if (input == null)
-                {
+                if (input == null) {
                     char temp;
                     String underline = "";
                     input = inputfield.getText().toLowerCase();
@@ -83,9 +86,9 @@ public class GUI extends JFrame {
 
                     welcome.setText("     Your word:");
                     for (int i = 0; i < input.length(); i++) {
-                        known =known+  "_";
-                        list.add ("_");
-                        underline =underline + " _ ";
+                        known = known + "_";
+                        list.add("_");
+                        underline = underline + " _ ";
                     }
 
                     knownWordLabel = new JLabel(underline);
@@ -95,18 +98,16 @@ public class GUI extends JFrame {
 
                     return;
                 }
-                 index = input.indexOf(inputfield.getText());// use index of to get the number of text
-                System.out.print(index+"\n");
+                index = input.indexOf(inputfield.getText());// use index of to get the number of text
+                System.out.print(index + "\n");
 
-                if (index>= 0)
-                {
+                if (index >= 0) {
                     Right();
                 }
-                if (index<0) {
+                if (index < 0) {
                     Wrong();
 
-                }
-                else {
+                } else {
 
                 }
             }
@@ -117,7 +118,6 @@ public class GUI extends JFrame {
 
     /**
      * the function to display the right answer and determine if it is win or not
-     *
      */
     private void Right() {
         String answer = inputfield.getText().toLowerCase();
@@ -125,8 +125,7 @@ public class GUI extends JFrame {
         ArrayList<Integer> indexes = new ArrayList<>();
         int index = input.indexOf(answer);
 
-        while ( index >= 0)
-        {
+        while (index >= 0) {
             indexes.add(index);
             //System.out.println(indexes);
             index = input.indexOf(answer, index + 1);
@@ -138,22 +137,21 @@ public class GUI extends JFrame {
             //System.out.println(index);
             list.set(index, answer);
 
-            for (String s : list)
-            {
+            for (String s : list) {
                 listString += s + " ";
             }
         }
         //System.out.println("after: "+ list);
         known = listString;
-            knownWordLabel.setText(listString);
-            //System.out.println(wordKnown);
+        knownWordLabel.setText(listString);
+        //System.out.println(wordKnown);
 
         inputfield.setText("");
 
-       if (known.indexOf("_") < 0) {
-           inputfield.setEditable(false);// after result
-           result.setText("        You Win!          ");
-       }
+        if (known.indexOf("_") < 0) {
+            inputfield.setEditable(false);// after result
+            result.setText("        You Win!          ");
+        }
 
     }
 
@@ -167,10 +165,10 @@ public class GUI extends JFrame {
         //https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html
         String wrong = inputfield.getText();
         set.add(wrong);
-        String replace=set.toString().replace("[","");
-        String replace1=replace.replace("]","");
-        MissedLabel.setText("You have missed: "+replace1);
-        wrongcount=set.size();
+        String replace = set.toString().replace("[", "");
+        String replace1 = replace.replace("]", "");
+        MissedLabel.setText("You have missed: " + replace1);
+        wrongcount = set.size();
 
         //Drawing:
         //https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html
@@ -180,13 +178,13 @@ public class GUI extends JFrame {
         g.setColor(Color.BLACK);
         switch (wrongcount) {
             case 1:
-                g.drawOval( 90, 100, 20, 20);//draw the head
+                g.drawOval(90, 100, 20, 20);//draw the head
                 break;
             case 2:
                 g.drawLine(100, 120, 100, 190);//draw body (just draw a vertical lane)
                 break;
             case 3:
-                g.drawLine(100,  140, 40, 120);//draw left arm
+                g.drawLine(100, 140, 40, 120);//draw left arm
 
                 break;
             case 4:
@@ -219,7 +217,7 @@ public class GUI extends JFrame {
      * horizontal lanes
      * https://docs.oracle.com/javase/7/docs/api/java/awt/Window.html
      */
-    private  void DrawHangmanframe(){
+    private void DrawHangmanframe() {
         //Drawing:
         //https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html
         Graphics2D g = (Graphics2D) hangman.getGraphics();

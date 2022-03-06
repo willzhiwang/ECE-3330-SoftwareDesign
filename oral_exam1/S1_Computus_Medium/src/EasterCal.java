@@ -4,13 +4,15 @@
  *
  */
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 // Create a class for last part in future use
 public class EasterCal {
 
     private int a, b, c, d, e, f, g, h, i, j, k, l, m, n;
-    private int day, year;
+    private int day;
+    private final int year;
     private String month;
 
     EasterCal(int num) {

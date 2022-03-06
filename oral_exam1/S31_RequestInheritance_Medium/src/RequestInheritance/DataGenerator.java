@@ -9,13 +9,13 @@ import java.util.UUID;
  */
 class DataGenerator {
     // fields to hold example data
-    private Random rand;
-    private String[] names;
-    private String[] encryption;
-    private String[] videoTitles;
-    private String[] filePaths;
-    private String[] fileTypes;
-    private String[] colors;
+    private final Random rand;
+    private final String[] names;
+    private final String[] encryption;
+    private final String[] videoTitles;
+    private final String[] filePaths;
+    private final String[] fileTypes;
+    private final String[] colors;
 
     // Constructor
 
@@ -36,35 +36,34 @@ class DataGenerator {
     // private utilities for data generation
 
     /**
-     *
      * @return random name
      */
     private String getRandName() {
         return this.names[this.rand.nextInt(this.names.length)];
     }
+
     /**
-     *
      * @return random color
      */
     private String getRandColor() {
         return this.colors[this.rand.nextInt(this.colors.length)];
     }
+
     /**
-     *
      * @return random video title
      */
     private String getRandVideoTitle() {
         return this.videoTitles[this.rand.nextInt(this.videoTitles.length)];
     }
+
     /**
-     *
      * @return random file type
      */
     private String getRandFileType() {
         return this.fileTypes[this.rand.nextInt(this.fileTypes.length)];
     }
+
     /**
-     *
      * @return random file path
      */
     private String getRandFilePath() {
@@ -72,50 +71,50 @@ class DataGenerator {
     }
 
     // public data generation tools
+
     /**
-     *
      * @return random url
      */
     public String getRandURL() {
         return "localhost:" + (((this.rand.nextInt(9) + 1) * 1000) + this.rand.nextInt(999));
     }
+
     /**
-     *
      * @return random pay
      */
     public Payment getRandPayment() {
         return new Payment(this.getRandName(), this.rand.nextInt(10000), this.getRandName());
     }
+
     /**
-     *
      * @return random uuid
      */
     public UUID getRandUUID() {
         return UUID.randomUUID();
     }
+
     /**
-     *
      * @return random Encryption Scheme
      */
     public String getRandEncryptionScheme() {
         return this.encryption[this.rand.nextInt(this.encryption.length)];
     }
+
     /**
-     *
      * @return random video
      */
     public Video getRandVideo() {
         return new Video(this.getRandURL(), this.getRandVideoTitle(), this.getRandName());
     }
+
     /**
-     *
      * @return random file
      */
     public File getRandFile() {
         return new File(this.getRandFilePath(), this.getRandFileType());
     }
+
     /**
-     *
      * @return random form
      */
     public Form getRandForm() {
@@ -127,7 +126,6 @@ class DataGenerator {
     }
 
     /**
-     *
      * @return random ip
      */
     public String getRandIP() {

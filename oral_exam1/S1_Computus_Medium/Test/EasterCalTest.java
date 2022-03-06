@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // 20 years: 2001-2010
 // Source:https://en.wikipedia.org/wiki/List_of_dates_for_Easter
@@ -35,9 +35,9 @@ public class EasterCalTest {
          *  Using Junit5 Test to test an array of dates
          */
         // save 20 samples as array includes years, yeas wrote as numbers, the actually date
-        int years[] = new int[20];
-        int dates[] = {415, 331, 420, 411, 327, 416, 408, 323, 412, 404, 424, 408, 331, 420, 405, 327, 416, 401, 421, 412};
-        String easterday[] = {"April 15", "March 31", "April 20", "April 11", "March 27", "April 16", "April 8", "March 23", "April 12", "April 4", "April 24", "April 8", "March 31", "April 20", "April 5", "March 27", "April 16", "April 1", "April 21", "April 12"};
+        int[] years = new int[20];
+        int[] dates = {415, 331, 420, 411, 327, 416, 408, 323, 412, 404, 424, 408, 331, 420, 405, 327, 416, 401, 421, 412};
+        String[] easterday = {"April 15", "March 31", "April 20", "April 11", "March 27", "April 16", "April 8", "March 23", "April 12", "April 4", "April 24", "April 8", "March 31", "April 20", "April 5", "March 27", "April 16", "April 1", "April 21", "April 12"};
         for (int i = 0; i < years.length; i++) {
             years[i] = 2001 + i;
             //Test
