@@ -22,7 +22,7 @@ public class Server extends JFrame {
      * @param connection            connection to client
      */
     private static final int PORT = 12000;
-    private JTextArea enterField;// inputs message from user
+    private final JTextArea enterField;// inputs message from user
 
     private ObjectOutputStream output; // output stream to client
     private ObjectInputStream input; // input stream from client
@@ -65,6 +65,7 @@ public class Server extends JFrame {
 
     /**
      * processConnection method that process connection with client
+     *
      * @throws IOException
      */
     private void processConnection() throws IOException {
@@ -98,6 +99,7 @@ public class Server extends JFrame {
 
     /**
      * waitForConnection method, wait for connection to arrive, then display connection info
+     *
      * @throws IOException
      */
     private void waitForConnection() throws IOException {
@@ -108,6 +110,7 @@ public class Server extends JFrame {
 
     /**
      * getStreams method, get streams to send and receive data
+     *
      * @throws IOException
      */
     public void getStreams() throws IOException {
@@ -119,6 +122,7 @@ public class Server extends JFrame {
 
     /**
      * sendData method, wait for connection to arrive, then display connection info
+     *
      * @throws IOException
      */
     public void sendData(String message) {
@@ -132,6 +136,7 @@ public class Server extends JFrame {
 
     /**
      * closeConnection method, wait for connection to arrive, then display connection info
+     *
      * @throws IOException
      */
     public void closeConection() {

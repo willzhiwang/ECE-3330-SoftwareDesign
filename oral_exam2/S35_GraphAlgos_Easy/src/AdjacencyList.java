@@ -8,11 +8,13 @@
 
 public class AdjacencyList {
     /**
-    * @param edages         the total edges
+     * @param edages         the total edges
      */
     private int edages = 0;
+
     /**
-     *indexOfDifference method compare two words and return the edges between them
+     * indexOfDifference method compare two words and return the edges between them
+     *
      * @return the edges between two words
      */
     public int indexOfDifference(String a, String b) {

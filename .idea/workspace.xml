@@ -283,8 +283,25 @@
   <component name="ChangeListManager">
     <list default="true" id="afe8c167-415f-4ec2-a281-392f25806ebd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oral_exam1/S10_ArabicToRomanGUI_Hard/src/GUInumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam1/S10_ArabicToRomanGUI_Hard/src/GUInumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oral_exam1/S10_ArabicToRomanGUI_Hard/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam1/S10_ArabicToRomanGUI_Hard/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/18-20_MazeTraversal_Hard/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/18-20_MazeTraversal_Hard/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/18-20_MazeTraversal_Hard/src/MazeTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/18-20_MazeTraversal_Hard/src/MazeTraversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/23-10_BouncingBalls_Easy/src/Bouncing.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/23-10_BouncingBalls_Easy/src/Bouncing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/23-10_BouncingBalls_Easy/src/GUIball.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/23-10_BouncingBalls_Easy/src/GUIball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/23-10_BouncingBalls_Easy/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/23-10_BouncingBalls_Easy/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/28-13_FileRetrieve_Easy/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/28-13_FileRetrieve_Easy/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/28-13_FileRetrieve_Easy/src/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/28-13_FileRetrieve_Easy/src/ClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/28-13_FileRetrieve_Easy/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/28-13_FileRetrieve_Easy/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/28-13_FileRetrieve_Easy/src/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/28-13_FileRetrieve_Easy/src/ServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/S20_TicTacToe_Hard/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/S20_TicTacToe_Hard/src/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/S20_TicTacToe_Hard/src/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/S20_TicTacToe_Hard/src/ComputerPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/S20_TicTacToe_Hard/src/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/S20_TicTacToe_Hard/src/HumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/S20_TicTacToe_Hard/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/S20_TicTacToe_Hard/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/S20_TicTacToe_Hard/src/TicTacToeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/S20_TicTacToe_Hard/src/TicTacToeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/S22_ImageRotator_Hard/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/S22_ImageRotator_Hard/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/S22_ImageRotator_Hard/src/RotatorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/S22_ImageRotator_Hard/src/RotatorGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/S35_GraphAlgos_Easy/src/AdjacencyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/S35_GraphAlgos_Easy/src/AdjacencyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/S35_GraphAlgos_Easy/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/S35_GraphAlgos_Easy/src/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oral_exam2/S35_GraphAlgos_Easy/src/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/oral_exam2/S35_GraphAlgos_Easy/src/ReadFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -488,6 +505,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
@@ -512,64 +530,56 @@
       <recent name="C:\Users\MarkusDrealan\git\swd2018\textbook_examples\MVCCalculatorExamples" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.Graph">
+    <configuration name="ClientTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClientTest" />
+      <module name="28-13_FileRetrieve_Easy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Graph" />
+      <module name="S35_GraphAlgos_Easy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="S21_HangmanGUI_Medium" />
+      <module name="S22_ImageRotator_Hard" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="S27_MachineLearning_Medium" />
+    <configuration name="ServerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ServerTest" />
+      <module name="28-13_FileRetrieve_Easy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RequestInheritance.Server" />
-      <module name="S31_RequestInheritance_Medium" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="RequestInheritance.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main" />
-      <module name="S1_Computus_Medium" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MachineLearningTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="S27_MachineLearning_Medium" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MachineLearningTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="TicTacToeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TicTacToeTest" />
+      <module name="S20_TicTacToe_Hard" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ClientTest" />
+      <item itemvalue="Application.ServerTest" />
+      <item itemvalue="Application.TicTacToeTest" />
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.main" />
-      <item itemvalue="Application.Main (2)" />
-      <item itemvalue="JUnit.MachineLearningTest" />
-      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.Graph" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server" />
-        <item itemvalue="JUnit.MachineLearningTest" />
-        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Graph" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.main" />
+        <item itemvalue="Application.TicTacToeTest" />
+        <item itemvalue="Application.ClientTest" />
+        <item itemvalue="Application.ServerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -860,6 +870,17 @@
     <MESSAGE value="update iml file" />
     <MESSAGE value="update iml file, it was set to java 11 jdk" />
     <option name="LAST_COMMIT_MESSAGE" value="update iml file, it was set to java 11 jdk" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/oral_exam2/28-13_FileRetrieve_Easy/src/Server.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/oral_exam1/S1_Computus_Medium/src/Main.java">

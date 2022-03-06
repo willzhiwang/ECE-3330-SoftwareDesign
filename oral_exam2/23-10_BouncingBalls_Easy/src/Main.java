@@ -6,15 +6,13 @@
  * This class contain 1 main method which runs the GUI
  */
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 /**
  * @see GUIball this is the class to set size
- *
  */
 public class Main {
     /**
-     *
      * @param args
      */
     public static void main(String[] args) {

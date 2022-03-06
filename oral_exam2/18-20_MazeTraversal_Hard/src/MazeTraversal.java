@@ -7,7 +7,7 @@
  */
 public class MazeTraversal {
     /**
-     *@param initiCol
+     * @param initiCol
      * @param initiRow
      * @param moves
      * @param maze
@@ -15,7 +15,7 @@ public class MazeTraversal {
     private static final int initiCol = 0;
     private static final int initiRow = 2;
     private static int moves = 0;
-    private static char maze[][] = {
+    private static char[][] maze = {
             {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
             {'#', '.', '.', '.', '#', '.', '.', '.', '.', '.', '.', '#'},
             {'.', '.', '#', '.', '#', '.', '#', '#', '#', '#', '.', '#'},
@@ -30,15 +30,34 @@ public class MazeTraversal {
             {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}};  // creating the maze
 
     /**
+     * The mazeDone method to check if maze is all the way to the wall
+     *
+     * @return (row = = 0) || (row == 11) || (col == 0) || (col == 11)
+     */
+    private static boolean mazeDone(int row, int col) {
+        return ((row == 0) || (row == 11) || (col == 0) || (col == 11));
+    }
+
+    /**
+     * The mazeRange method to check if maze is still able to move in the range
+     *
+     * @return (row > = 0) && (row <= 11) && (col >= 0) && (col <= 11) && (maze[row][col] == '.')
+     */
+    private static boolean mazeRange(int row, int col) {
+        return ((row >= 0) && (row <= 11) && (col >= 0) && (col <= 11) && (maze[row][col] == '.'));
+    }
+
+    /**
      * The mazeTraversal method to passing the new spot on the maze as the current spot
      * recursive function, every time check if it hit the wall and if it's keep going
+     *
      * @param maze
      * @param y
      * @param x
      * @teurn true/false
      */
-    private boolean mazeTraversal(char maze[][], int y, int x) {
-        this.maze = maze;
+    private boolean mazeTraversal(char[][] maze, int y, int x) {
+        MazeTraversal.maze = maze;
         maze[y][x] = 'x';
         printMaze();  // print maze
         moves++;
@@ -66,6 +85,7 @@ public class MazeTraversal {
             return false;
         }
     }
+
     /**
      * The printMaze method to print the 2D array as maze
      */
@@ -79,20 +99,7 @@ public class MazeTraversal {
         }
         System.out.println();
     }
-    /**
-     * The mazeDone method to check if maze is all the way to the wall
-     * @return (row == 0) || (row == 11) || (col == 0) || (col == 11)
-     */
-    private static boolean mazeDone(int row, int col) {
-        return ((row == 0) || (row == 11) || (col == 0) || (col == 11));
-    }
-    /**
-     * The mazeRange method to check if maze is still able to move in the range
-     * @return (row >= 0) && (row <= 11) && (col >= 0) && (col <= 11) && (maze[row][col] == '.')
-     */
-    private static boolean mazeRange(int row, int col) {
-        return ((row >= 0) && (row <= 11) && (col >= 0) && (col <= 11) && (maze[row][col] == '.'));
-    }
+
     /**
      * The checkMazePossibility method to check if maze has a solution
      */

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 /**
  * @author Zhi Wang
  * @version 11/18/2018
@@ -7,6 +8,9 @@ import java.util.ArrayList;
  * This class contain 3 methods to find edit distance
  */
 public class EditDistance {
+    static int[][] result;
+    private static final ArrayList<String> prints = new ArrayList<String>();
+    private static int ed = 0;
     /**
      * @param arr1                      the array to save 1st word to char
      * @param arr2                      the array to save 2nd word to char
@@ -14,15 +18,14 @@ public class EditDistance {
      * @param prints                    the list of the steps
      * @param ed                        the edit distance value
      */
-    private char[] arr1, arr2;
-    static int[][] result;
-    private static ArrayList<String> prints = new ArrayList<String>();
-    private static int ed = 0;
+    private final char[] arr1;
+    private final char[] arr2;
 
     /**
      * the constructor of EditDistance to call minDistance and backtrace and print the final answer
-     * @param str1  1st word
-     * @param str2  2nd word
+     *
+     * @param str1 1st word
+     * @param str2 2nd word
      */
     EditDistance(String str1, String str2) {
         arr1 = str1.toCharArray();
@@ -31,10 +34,12 @@ public class EditDistance {
         backtrace(str1, str2);
         System.out.println("edit distance: " + ed + " --> " + prints.toString().replace(",", "").replace("[", "").replace("]", ""));
     }
+
     /**
      * minDistance method using DP edit distance solution
-     * @param word1  1st word
-     * @param word2  2nd word
+     *
+     * @param word1 1st word
+     * @param word2 2nd word
      */
     //Reference of using matrix https://web.stanford.edu/class/cs124/lec/med.pdf
     public int minDistance(String word1, String word2) {
@@ -70,32 +75,31 @@ public class EditDistance {
     }
 
     /**
-     *backtrace method to backtrace the result matrix from minDistance
-     * @param word1         the 1st string
-     * @param word2         the 2nd string
+     * backtrace method to backtrace the result matrix from minDistance
+     *
+     * @param word1 the 1st string
+     * @param word2 the 2nd string
      */
     public void backtrace(String word1, String word2) {
-        int dis =0;
-        int i =word1.length();
-        int j =word2.length();
+        int dis = 0;
+        int i = word1.length();
+        int j = word2.length();
         // keep finding the smaller value in the matrix until 0
-        while (  result[i][j] != 0 ) {
-            if (j >0 && i> 0&& result[i][j] > result[i - 1][j - 1]) {
+        while (result[i][j] != 0) {
+            if (j > 0 && i > 0 && result[i][j] > result[i - 1][j - 1]) {
                 j--;
                 i--;
                 dis++;
-                prints.add( dis + ". replace '" + arr1[i] + "' in str1 with a '" + arr2[j] +"'\n" );
-            }
-            else if (j >0 &&result[i][j] > result[i][j - 1]) {
+                prints.add(dis + ". replace '" + arr1[i] + "' in str1 with a '" + arr2[j] + "'\n");
+            } else if (j > 0 && result[i][j] > result[i][j - 1]) {
                 j--;
                 dis++;
-                prints.add( dis + ". add '" + arr2[j] + "' to str1\n");
-            } else if (i> 0&& result[i][j] > result[i - 1][j]) {
+                prints.add(dis + ". add '" + arr2[j] + "' to str1\n");
+            } else if (i > 0 && result[i][j] > result[i - 1][j]) {
                 i--;
                 dis++;
                 prints.add(dis + ". remove '" + arr1[i] + "' from str1\n");
-            }
-            else if (j >0 && i> 0&&result[i][j] == result[i - 1][j - 1]) {// move to next char
+            } else if (j > 0 && i > 0 && result[i][j] == result[i - 1][j - 1]) {// move to next char
                 j--;
                 i--;
             }

@@ -18,6 +18,7 @@ import java.net.Socket;
  */
 
 public class Client extends JFrame {
+    private static final int PORT = 12000; // port for this application
     /**
      * @param PORT                   server port
      * @param enterField             inputs message from user
@@ -28,14 +29,13 @@ public class Client extends JFrame {
      * @param displayArea           display information to user
      * @param message               message from server
      */
-    private JTextField enterField = new JTextField();// enters information from user
-    private JTextArea displayArea = new JTextArea();// display information to user
+    private final JTextField enterField = new JTextField();// enters information from user
+    private final JTextArea displayArea = new JTextArea();// display information to user
+    private final String host;// host server for this application
     private ObjectOutputStream output;// output stream to server
     private ObjectInputStream input;// input stream from server
     private String message = "";// message from server
-    private String host;// host server for this application
     private Socket client;// socket to communicate with server
-    private static final int PORT = 12000; // port for this application
 
     /**
      * This is the Client constructor which initialize chatServer and set up GUI
@@ -87,6 +87,7 @@ public class Client extends JFrame {
 
     /**
      * sendData method send message to server
+     *
      * @param message
      */
     public void sendData(String message) //implements ActionListener
@@ -104,6 +105,7 @@ public class Client extends JFrame {
 
     /**
      * connectTOServer method close streams and socket
+     *
      * @throws IOException
      */
     private void connectToServer() throws IOException {
@@ -116,6 +118,7 @@ public class Client extends JFrame {
 
     /**
      * getStreams method, get streams to send and receive data
+     *
      * @throws IOException
      */
     private void getStreams() throws IOException {
@@ -129,6 +132,7 @@ public class Client extends JFrame {
 
     /**
      * processConnection method which process connection with server
+     *
      * @throws IOException
      */
     private void processConnection() throws IOException {

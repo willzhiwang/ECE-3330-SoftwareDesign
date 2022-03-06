@@ -8,10 +8,10 @@
 public class TicTacToeTest {
     /**
      * Main method to call board class and get started
+     *
      * @param argus
      */
-    public static void main (String[] argus)
-    {
+    public static void main(String[] argus) {
         Board b = new Board();
     }
 }

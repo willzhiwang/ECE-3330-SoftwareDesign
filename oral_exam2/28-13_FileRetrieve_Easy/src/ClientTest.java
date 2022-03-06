@@ -10,6 +10,7 @@ import javax.swing.*;
 public class ClientTest {
     /**
      * main function to set gui and host
+     *
      * @param args
      */
     public static void main(String[] args) {

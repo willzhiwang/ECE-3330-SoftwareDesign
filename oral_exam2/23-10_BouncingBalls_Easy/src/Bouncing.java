@@ -1,6 +1,6 @@
-import java.awt.Color;
-import java.awt.Graphics;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
+
 /**
  * @author Zhi Wang
  * @version 11/08/2018
@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 public class Bouncing extends JPanel {
     /**
-     *@param diameter
+     * @param diameter
      * @param speed
      * @param xSpeed
      * @param ySpeed
@@ -23,6 +23,7 @@ public class Bouncing extends JPanel {
     private int ySpeed = 1, xSpeed = 1;
     private int x = 0;
     private int y = 0;
+
     /**
      * This is the paint method. This method will paint ball.
      */

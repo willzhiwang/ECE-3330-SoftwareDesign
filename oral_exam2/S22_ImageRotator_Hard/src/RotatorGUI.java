@@ -15,11 +15,9 @@ import java.io.IOException;
  * @see RotatorGUI
  * <p>
  * This RotatorGUI class  extends JFrame and contain 4 methods
- *
  */
 public class RotatorGUI extends JFrame {
     /**
-     *
      * @param delayValue                the delay value
      * @param angleValue                the angle
      * @param change                        the angle to change
@@ -28,7 +26,7 @@ public class RotatorGUI extends JFrame {
     public static int delayValue = 10;
     public int angleValue = 0;
     private int change;
-    private String fileName ="Round.png";
+    private final String fileName = "Round.png";
 
     /**
      * RotatorGUI method to set gui and added key event and timer
@@ -55,18 +53,16 @@ public class RotatorGUI extends JFrame {
                 String result1 = angleTxt.getText();
                 try {
                     angleValue = Integer.parseInt(result1);
-                    if (angleValue >360 || angleValue < -360) {
+                    if (angleValue > 360 || angleValue < -360) {
                         angleValue = angleValue % 360;
                         warnning.setText("Pls input abs value < 360");
-                    }
-                    else
-                    {
+                    } else {
                         warnning.setText("");
                     }
                     System.out.println(change);
                 } catch (NumberFormatException error) {
                     warnning.setText("Please input a number");
-                    angleValue=0;
+                    angleValue = 0;
                 }
                 change = angleValue;
             }
@@ -75,17 +71,18 @@ public class RotatorGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 image.setIcon(new ImageIcon(rotate(angleValue)));//setIcon
-                angleValue = angleValue + change ;
+                angleValue = angleValue + change;
             }
         });
         timer.setDelay(delayValue);
         timer.start();
     }
+
     /**
-     *
      * rotate method to set gui and added key event and timer
-     * @param  angle                the angle needs to rotate
-     * @return                          the rotated image
+     *
+     * @param angle the angle needs to rotate
+     * @return the rotated image
      */
     public BufferedImage rotate(int angle) {
         BufferedImage image;
@@ -95,11 +92,11 @@ public class RotatorGUI extends JFrame {
             File location = new File(classLoader.getResource(fileName).getFile());
             image = ImageIO.read(location);
 
-            BufferedImage rImage = new BufferedImage(image.getWidth(), image.getHeight() ,BufferedImage.TYPE_INT_RGB);
+            BufferedImage rImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
 
             Graphics2D g = rImage.createGraphics();
-            g.rotate(Math.toRadians(angle),image.getWidth()/2,image.getHeight()/2);
-            g.drawImage(image,null,null);
+            g.rotate(Math.toRadians(angle), image.getWidth() / 2, image.getHeight() / 2);
+            g.drawImage(image, null, null);
             g.dispose();
             return rImage;
 
